@@ -1,3 +1,5 @@
+require 'pry'
+
 class Triangle
-  # write code here
+  
 end
