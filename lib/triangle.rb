@@ -21,6 +21,6 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    # triangle error code
+    @side_lengths.any? {|x| x == 0}
   end
 end
