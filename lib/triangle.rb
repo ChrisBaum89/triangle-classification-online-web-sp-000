@@ -12,9 +12,13 @@ class Triangle
   end
 
   def kind
-    if side_1 == side_2 && side_2 ==side_3
+    if @side_lengths.uniq.count == 1
       @type = "equilateral"
-    elsif
+    elsif @side_lengths.uniq.count == 2
+      @type = "isosceles"
+    else
+      @type = "scalene"
+    end
 
 
   end
