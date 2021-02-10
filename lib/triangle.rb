@@ -15,14 +15,13 @@ class Triangle
       @type = :equilateral
     elsif @side_lengths.uniq.count == 2
       @type = :isosceles
+    elsif @side_lengths.any? {|x| x == 0}
+      raise TriangleError
     else
       @type = :scalene
     end
   end
 
   class TriangleError < StandardError
-    binding.pry
-    @side_lengths.any? {|x| x == 0}
-    #binding.pry
   end
 end
