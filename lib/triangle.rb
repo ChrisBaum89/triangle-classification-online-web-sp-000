@@ -11,12 +11,12 @@ class Triangle
   end
 
   def kind
-    if @side_lengths.uniq.count == 1
+    if @side_lengths.any? {|x| x == 0}
+      raise TriangleError
+    elsif @side_lengths.uniq.count == 1
       @type = :equilateral
     elsif @side_lengths.uniq.count == 2
       @type = :isosceles
-    elsif @side_lengths.any? {|x| x == 0}
-      raise TriangleError
     else
       @type = :scalene
     end
