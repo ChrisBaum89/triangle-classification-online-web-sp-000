@@ -23,6 +23,6 @@ class Triangle
   class TriangleError < StandardError
     binding.pry
     @side_lengths.any? {|x| x == 0}
-    binding.pry
+    #binding.pry
   end
 end
