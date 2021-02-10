@@ -15,6 +15,10 @@ class Triangle
       raise TriangleError
     elsif not (@side_lengths[0] + @side_lengths[1] > @side_lengths[2])
       raise TriangleError
+    elsif not (@side_lengths[0] + @side_lengths[2] > @side_lengths[1])
+      raise TriangleError
+    elsif not (@side_lengths[1] + @side_lengths[2] > @side_lengths[0])
+      raise TriangleError
     elsif @side_lengths.uniq.count == 1
       @type = :equilateral
     elsif @side_lengths.uniq.count == 2
