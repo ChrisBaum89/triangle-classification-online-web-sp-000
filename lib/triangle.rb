@@ -19,7 +19,5 @@ class Triangle
     else
       @type = "scalene"
     end
-
-
   end
 end
