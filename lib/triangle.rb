@@ -12,11 +12,11 @@ class Triangle
 
   def kind
     if @side_lengths.uniq.count == 1
-      @type = "equilateral"
+      @type = :equilateral
     elsif @side_lengths.uniq.count == 2
-      @type = "isosceles"
+      @type = :isosceles
     else
-      @type = "scalene"
+      @type = :scalene
     end
   end
 end
