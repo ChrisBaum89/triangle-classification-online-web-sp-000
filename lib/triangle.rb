@@ -12,7 +12,7 @@ class Triangle
 
   def kind
     binding.pry
-    if @side_lengths.any? {|x| x < 1} #takes care of 0 and negative sides
+    if @side_lengths.any? {|x| x <= 0} #takes care of 0 and negative sides
       raise TriangleError
     elsif not (@side_lengths[0] + @side_lengths[1] > @side_lengths[2])
       raise TriangleError
