@@ -22,5 +22,6 @@ class Triangle
 
   class TriangleError < StandardError
     @side_lengths.any? {|x| x == 0}
+    binding.pry
   end
 end
